@@ -5,7 +5,7 @@ const movies = ['Terminator 2', 'Scream', 'Fight Club']
 function App() {
     return (
         <>
-            <h1>Mein Movie-Tracker</h1>
+            <h1>Movie-Tracker</h1>
             <ul>
                 {movies.map(movie =>
                     <li key={movie}>{movie}</li>
