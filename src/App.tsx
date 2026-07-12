@@ -26,7 +26,6 @@ function App() {
     const [inputValue, setInputValue] = useState('')
 
     // Handler-Funktion: wird aufgerufen wenn der Button geklickt wird
-
     function handleAdd() {
         // Abbruch wenn das Eingabefeld leer ist (trim() entfernt Leerzeichen)
         if (inputValue.trim() === '') return
