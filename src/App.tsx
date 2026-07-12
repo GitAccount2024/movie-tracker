@@ -49,10 +49,7 @@ function App() {
 
     return (
         <>
-            {/* Überschrift der App */}
             <h1>Mein Movie-Tracker</h1>
-
-            {/* Filmliste: für jeden Film im Array ein <li> erzeugen */}
             <ul>
                 {movies.map(movie =>
                     // key={movie.id} hilft React, jeden Eintrag eindeutig zu erkennen
