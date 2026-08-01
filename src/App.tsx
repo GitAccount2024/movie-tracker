@@ -49,23 +49,31 @@ function App() {
 
     return (
         <div className="container">
-            {/* Überschrift*/}
+        {/* Überschrift*/}
             <h1 className='title'>Mein Movie-Tracker</h1>
 
             {/* Filmliste */}
             <ul className='movie-list'>
                 {movies.map(movie =>
-
-
-
+                    <li key={movie.id} className='movie-item'>
+                        {movie.id}
+                    </li>
                 )}
-
-
-
-
             </ul>
-
-
+        
+        {/* Eingabebereich */}
+        <div className='add-form'>
+                <input 
+                    className='movie-input'
+                    type="text" 
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder='filmtitel eingeben...'
+                />
+                <button className='add-button' onClick={handleAdd}>
+                    Hinzufügen
+                </button>
+        </div>
 
         </div>
         
