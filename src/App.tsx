@@ -48,28 +48,27 @@ function App() {
     }
 
     return (
-        <>
-            <h1>Mein Movie-Tracker</h1>
-            <ul>
+        <div className="container">
+            {/* Überschrift*/}
+            <h1 className='title'>Mein Movie-Tracker</h1>
+
+            {/* Filmliste */}
+            <ul className='movie-list'>
                 {movies.map(movie =>
-                    // key={movie.id} hilft React, jeden Eintrag eindeutig zu erkennen
-                    <li key={movie.id}>{movie.title}</li>
+
+
+
                 )}
+
+
+
+
             </ul>
 
-            {/* Eingabefeld für neuen Filmtitel */}
-            {/* value={inputValue} verbindet das Feld mit dem State */}
-            {/* onChange aktualisiert den State bei jedem Tastendruck */}
-            <input 
-                type="text" 
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Filmtitel eingeben..."
-            />
 
-            {/* Button ruft handleAdd auf wenn geklickt */}
-            <button onClick={handleAdd}>Hinzufügen</button>
-        </>
+
+        </div>
+        
     )
 }
 
