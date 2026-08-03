@@ -1,8 +1,8 @@
 /* Grundeinstellung: Dunkler Hintergrund für die ganze Seite */
 body {
-    background-color: #0f0f0f;
-    color: #e0e0e0;
-    font-family: 'Segoe UI',;
+    background-color: #343434;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* Äußere Hülle: zentriert den Inhalt auf der Seite */
@@ -23,10 +23,49 @@ body {
 
 /* Ein einzelner Film in der Liste */
 .movie-item {
-    padding: 14px16px;
+    padding: 14px 16px;
     margin-bottom: 8px;
     background-color: #1e1e1e;
     border-radius: 8px;
     color: #e0e0e0;
     font-size: 1rem;
+}
+
+/* Eingabebereich: Input und Button nebeneinander */
+.add-form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Das Eingabefeld */
+.movie-input {
+    flex: 1;
+    padding: 12px 16px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Eingabefeld wenn aktiv (Nutzer klickt drauf */
+.movie-input:focus {
+    border-color: #555;
+}
+
+/* Der hinzufügen-Button */
+.add-button {
+    padding: 12px 20px;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Button wenn Maus drüber ist */
+.add-button:hover {
+    background-color: #cc0812;
 }

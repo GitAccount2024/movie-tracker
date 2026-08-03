@@ -56,7 +56,7 @@ function App() {
             <ul className='movie-list'>
                 {movies.map(movie =>
                     <li key={movie.id} className='movie-item'>
-                        {movie.id}
+                        {movie.title}
                     </li>
                 )}
             </ul>
