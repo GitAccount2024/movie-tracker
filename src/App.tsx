@@ -27,9 +27,7 @@ function App() {
 
     // Handler-Funktion: wird aufgerufen wenn der Button geklickt wird
     function handleAdd() {
-        // Abbruch wenn das Eingabefeld leer ist (trim() entfernt Leerzeichen)
         if (inputValue.trim() === '') return
-
         // Neues Film-Objekt erstellen
         // id = aktuelle Länge des Arrays + 1 (einfache Lösung für eindeutige ids)
         // title = was der Nutzer eingegeben hat
@@ -47,16 +45,26 @@ function App() {
         setInputValue('')
     }
 
+    function removeFilm(id: number) {
+        setMovies(movies.filter(movie => movie.id !== id))
+    }
+
     return (
         <div className="container">
         {/* Überschrift*/}
             <h1 className='title'>Mein Movie-Tracker</h1>
-
             {/* Filmliste */}
             <ul className='movie-list'>
                 {movies.map(movie =>
+                // Jedes li hat seinen eigenen Löschen-Button
                     <li key={movie.id} className='movie-item'>
-                        {movie.title}
+                            {movie.title}
+                        <button 
+                            className='delete-Button' 
+                            onClick={() => removeFilm(movie.id)}
+                        >
+                            X
+                        </button>
                     </li>
                 )}
             </ul>
@@ -73,6 +81,7 @@ function App() {
                 <button className='add-button' onClick={handleAdd}>
                     Hinzufügen
                 </button>
+                
         </div>
 
         </div>
